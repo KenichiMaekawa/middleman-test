@@ -13,5 +13,7 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
+gem "rack-rewrite", "~> 1.4.1"
+
 gem "haml"
 gem "erb2haml"
