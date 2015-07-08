@@ -20,12 +20,12 @@ module Rack
   end
 end
 
-require 'rack/rewrite'
-use Rack::Rewrite do
-  r301 %r{.*}, 'http://test.bijint.com$&', :if => Proc.new {|rack_env|
-    rack_env['SERVER_NAME'] != 'test.bijint.com'
-  }
-end
+#require 'rack/rewrite'
+#use Rack::Rewrite do
+#  r301 %r{.*}, 'http://test.bijint.com$&', :if => Proc.new {|rack_env|
+#    rack_env['SERVER_NAME'] != 'test.bijint.com'
+#  }
+#end
 
 use Rack::TryStatic, :root => "build", :urls => %w[/], :try => ['.html', 'index.html', '/index.html']
 
